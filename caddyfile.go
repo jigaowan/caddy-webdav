@@ -48,7 +48,6 @@ func (wd *WebDAV) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 				if !d.NextArg() {
 					return d.ArgErr()
 				}
-
 				wd.Prefix = d.Val()
 			default:
 				return d.Errf("unrecognized subdirective: %s", d.Val())
